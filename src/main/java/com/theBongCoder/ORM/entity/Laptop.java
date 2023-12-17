@@ -1,8 +1,6 @@
 package com.theBongCoder.ORM.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,6 +14,5 @@ public class Laptop extends BasicEntity {
     private String modelNumber;
 
     @OneToOne
-    @JoinTable(name = "studentId")
     private Student student;
 }
